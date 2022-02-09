@@ -30,22 +30,14 @@
 
   </head>
   <body>
-    <header>  
-        <div id="ad-box" class="d-flex flex-column">
-          <button id="ad-close" type="button" class="btn-close align-self-end" aria-label="Close"></button>
-          <a href="https://www.dcard.tw/@xddd123456789"><img src="assets/images/ad.jpg" alt=""></a>
-          <p class="align-self-start mx-2">為什麼我會看到這則廣告？</p>
-        </div>
-      
-    </header>
 
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">恆河牌</a>
+          <a class="navbar-brand" href="index.html">恆河牌</a>
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">首頁</a>
+                <a class="nav-link" aria-current="page" href="index.html">首頁</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">聯絡客服</a>
@@ -56,6 +48,12 @@
           </div>
         </div>
     </nav>
+    
+    <div id="ad-box" class="d-flex flex-column">
+      <button id="ad-close" type="button" class="btn-close align-self-end" aria-label="Close"></button>
+      <a href="https://www.dcard.tw/@xddd123456789"><img src="assets/images/ad.jpg" alt=""></a>
+      <p class="align-self-start mx-2">為什麼我會看到這則廣告？</p>
+    </div>
 
     <main class="container">
         <div id="product" class="container my-5">
@@ -114,17 +112,12 @@
     <script src = "https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
     
     <script>
-      // $("#ad-box").show();
-
-      // $("#ad-close").click(
-      //   function(){
-      //     $("#ad-box").hide();
-      //   }
-      // );
+      //廣告沒辦法隱藏
+      $("#ad-box").show();
 
       $("#ad-close").click(function(){
-  $("#ad-box").hide();
-});
+        $("#ad-box").hide();
+      });
     </script>
   </body>
 </html>
