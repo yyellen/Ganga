@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>恆河牌 會員登入</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .nav-link{
+          border-bottom: 3px solid black;
+          margin-right: 36px;
+        }
+    </style>
+
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">恆河牌</a>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">聯絡客服</a>
+              </li>
+          </div>
+          <div>
+            <a href="singin.html" class="btn btn-dark">登入</a>
+          </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="signin" class="container my-5">
+            <h1>登入 | 註冊</h1>
+            <form action="" class="my-5">
+              <div class="mb-3">
+                <label for="name" class="form-label">姓名：</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">信箱：</label>
+                <input type="email" class="form-control" id="email" aria-describedby="formHelp" placeholder="example@mail.com">
+                <div id="formHelp" class="form-text">練習專案，請勿填寫真實個資及帳密。</div>
+              </div>
+              <div class="mb-3">
+                <label for="username" class="form-label">使用者名稱：</label>
+                <input type="text" class="form-control" id="username">
+              </div>
+              <div class="mb-3">
+                <label for="password1" class="form-label">使用者密碼：</label>
+                <input type="password" class="form-control" id="password1" placeholder="密碼長度需大於8個字元">
+              </div>
+              <div class="mb-3">
+                <label for="password2" class="form-label">驗證使用者密碼：</label>
+                <input type="password" class="form-control" id="password2" placeholder="請再次輸入密碼">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="Checkbox">
+                <label class="form-check-label" for="checkbox">記住我</label>
+              </div>
+              <div id="sysmessenge" class="mb-3">
+                <p id="pwWarr" class="text-danger"></p>
+                <p id="pwckWarr" class="text-danger"></p>
+              </div>
+              <div class="d-flex justify-content-center my-5">
+                <button class="btn btn-primary" onclick="return singupCheck(this)">送出</button>
+              </div>
+            </form>
+          </div>
+    </main>
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+    <!-- jQuery-->
+    <script src = "https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        //將按鈕 <a> 換成 <button onclick=""> 的設定就可以了//
+      
+      $("button").click(
+        function singupCheck() {
+          var nameCheck = document.getElementById("name").value;
+          var emailCheck = document.getElementById("email").value;
+          var usernameCheck = document.getElementById("username").value;
+          var pw = document.getElementById("password1").value;
+          var pwck = document.getElementById("password2").value;
+        
+          if (nameCheck == null || nameCheck == "") {
+            alert("姓名未填寫");
+            return false;
+          } else if (emailCheck == null || emailCheck == "") {
+            alert("信箱未填寫");
+            return false;
+          } else if (usernameCheck == null || usernameCheck == "") {
+            alert("使用者名稱未填寫");
+            return false;
+          } else if (pw == null || pw == "") {
+            alert("使用者密碼未填寫");
+            return false;
+          } else if (pwck == null || pwck == "") {
+            alert("驗證使用者密碼未填寫");
+            return false;
+          } else {
+            location.href = "cart.html";
+          }
+        }
+      );
+    
+    // 另外，老師有限制密碼至少8字元，
+    // 若你用 keypress 來感應密碼長度的話，密碼會需要輸入到9字元，警告訊息才會消失，
+    // 所以這邊你可以將 keypress 換成 keyup，這樣你輸入8字元的密碼，警告訊息就會消失了。
+
+    // keypress 原理：只會感應前一個字元。
+    // 當密碼輸入到第8字元時，其實只有感應到第7字元，警告題是不會消失，因為感應到的長度只有7字元
+    // 當密碼輸入到第9字元時，其實只有感應到第8字元，警告提示會消失
+
+    // keyup 原理：會感應動作後(按完鍵盤)的當下字元。
+    // 當密碼輸入到第8字元時，因為已經輸入完8個字元了，警告提示就會消失
+    
+    $("#password1").keyup(
+      function pwLength() {
+        var value = $(this).val();
+        if (value.length < 8) {
+          $("#pwWarr").text("密碼太短");
+        } else {
+          $("#pwWarr").text("");
+        }
+      }
+    );
+    $("#password2").keyup(
+      function pwCheck() {
+        var pw = $("#password1").val();
+        var pwck = $(this).val();
+        if (pw === pwck) {
+          $("#pwckWarr").text("密碼一致，請按送出前往結帳");
+        } else {
+          $("#pwckWarr").text("密碼不一致，請再次輸入密碼");
+        }
+      }
+    );
+    </script>
+
+
+
+  </body>
+</html>
