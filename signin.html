@@ -147,7 +147,9 @@
         var pwck = $(this).val();
         if (pw === pwck) {
           $("#pwckPass").text("密碼驗證成功");
+          $("#pwckWarr").text("");
         } else {
+          $("#pwckPass").text("");
           $("#pwckWarr").text("密碼不一致，請再次輸入密碼");
         }
       }
