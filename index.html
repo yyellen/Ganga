@@ -112,11 +112,12 @@
     <script src = "https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
     
     <script>
-      //廣告沒辦法隱藏
-      $("#ad-box").show();
-
+      //廣告沒辦法隱藏：因為d-flex是important
+      //解法1.外面再包一個div 2.如下
       $("#ad-close").click(function(){
-        $("#ad-box").hide();
+        // $("#ad-box").hide();
+
+        $("#ad-box").removeClass("d-flex").addClass("d-none");
       });
     </script>
   </body>
