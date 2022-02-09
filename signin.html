@@ -68,6 +68,7 @@
               </div>
               <div id="sysmessenge" class="mb-3">
                 <p id="pwWarr" class="text-danger"></p>
+                <p id="pwckPass" class="text-success"></p>
                 <p id="pwckWarr" class="text-danger"></p>
               </div>
               <div class="d-flex justify-content-center my-5">
@@ -145,7 +146,7 @@
         var pw = $("#password1").val();
         var pwck = $(this).val();
         if (pw === pwck) {
-          $("#pwckWarr").text("");
+          $("#pwckPass").text("密碼驗證成功");
         } else {
           $("#pwckWarr").text("密碼不一致，請再次輸入密碼");
         }
