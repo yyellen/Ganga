@@ -40,7 +40,7 @@
     <main class="container">
         <div id="signin" class="container my-5">
             <h1>登入 | 註冊</h1>
-            <form action="" class="my-5">
+
               <div class="mb-3">
                 <label for="name" class="form-label">姓名：</label>
                 <input type="text" class="form-control" id="name">
@@ -72,10 +72,10 @@
                 <p id="pwckWarr" class="text-danger"></p>
               </div>
               <div class="d-flex justify-content-center my-5">
-                <a href="cart1.html" class="btn btn-success">我有寫cart但藍色按鈕不能跳轉</a>
+                <a href=""></a>
                 <button class="btn btn-primary">註冊</button>
               </div>
-            </form>
+
           </div>
     </main>
 
@@ -93,29 +93,29 @@
       
       $("button").click(
         function signupCheck() {
-        //   var nameCheck = document.getElementById("name").value;
-        //   var emailCheck = document.getElementById("email").value;
-        //   var usernameCheck = document.getElementById("username").value;
-        //   var pw = document.getElementById("password1").value;
-        //   var pwck = document.getElementById("password2").value;
+          var nameCheck = document.getElementById("name").value;
+          var emailCheck = document.getElementById("email").value;
+          var usernameCheck = document.getElementById("username").value;
+          var pw = document.getElementById("password1").value;
+          var pwck = document.getElementById("password2").value;
         
-        //   if (nameCheck == null || nameCheck == "") {
-        //     alert("姓名未填寫");
-        //     return false;
-        //   } else if (emailCheck == null || emailCheck == "") {
-        //     alert("信箱未填寫");
-        //     return false;
-        //   } else if (usernameCheck == null || usernameCheck == "") {
-        //     alert("使用者名稱未填寫");
-        //     return false;
-        //   } else if (pw == null || pw == "") {
-        //     alert("使用者密碼未填寫");
-        //     return false;
-        //   } else if (pwck == null || pwck == "") {
-        //     alert("驗證使用者密碼未填寫");
-        //     return false;
-        //   } else {
-            location.href = "cart1.html";
+          // if (nameCheck == null || nameCheck == "") {
+          //   alert("姓名未填寫");
+          //   return false;
+          // } else if (emailCheck == null || emailCheck == "") {
+          //   alert("信箱未填寫");
+          //   return false;
+          // } else if (usernameCheck == null || usernameCheck == "") {
+          //   alert("使用者名稱未填寫");
+          //   return false;
+          // } else if (pw == null || pw == "") {
+          //   alert("使用者密碼未填寫");
+          //   return false;
+          // } else if (pwck == null || pwck == "") {
+          //   alert("驗證使用者密碼未填寫");
+          //   return false;
+          // } else {
+            location.href = "cart.html";
           
         }
       );
