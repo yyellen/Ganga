@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>恆河牌 會員登入</title>
+    <title>恆河牌 會員註冊</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,15 +32,15 @@
               </li>
           </div>
           <div>
-            <a href="singin.html" class="btn btn-dark">登入</a>
+            <a href="signin.html" class="btn btn-dark">登入</a>
           </div>
         </div>
     </nav>
 
     <main class="container">
         <div id="signin" class="container my-5">
-            <h1>登入 | 註冊</h1>
-
+            <h1>您尚未成為會員</h1>
+            <div class="my-5">
               <div class="mb-3">
                 <label for="name" class="form-label">姓名：</label>
                 <input type="text" class="form-control" id="name">
@@ -75,7 +75,7 @@
                 <a href=""></a>
                 <button class="btn btn-primary">註冊</button>
               </div>
-
+            </div>
           </div>
     </main>
 
@@ -99,24 +99,24 @@
           var pw = document.getElementById("password1").value;
           var pwck = document.getElementById("password2").value;
         
-          // if (nameCheck == null || nameCheck == "") {
-          //   alert("姓名未填寫");
-          //   return false;
-          // } else if (emailCheck == null || emailCheck == "") {
-          //   alert("信箱未填寫");
-          //   return false;
-          // } else if (usernameCheck == null || usernameCheck == "") {
-          //   alert("使用者名稱未填寫");
-          //   return false;
-          // } else if (pw == null || pw == "") {
-          //   alert("使用者密碼未填寫");
-          //   return false;
-          // } else if (pwck == null || pwck == "") {
-          //   alert("驗證使用者密碼未填寫");
-          //   return false;
-          // } else {
-            location.href = "cart.html";
-          
+          if (nameCheck == null || nameCheck == "") {
+            alert("姓名未填寫");
+            return false;
+          } else if (emailCheck == null || emailCheck == "") {
+            alert("信箱未填寫");
+            return false;
+          } else if (usernameCheck == null || usernameCheck == "") {
+            alert("使用者名稱未填寫");
+            return false;
+          } else if (pw == null || pw == "") {
+            alert("使用者密碼未填寫");
+            return false;
+          } else if (pwck == null || pwck == "") {
+            alert("驗證使用者密碼未填寫");
+            return false;
+          } else {
+            location.href = "cart.html"; 
+          }
         }
       );
     
